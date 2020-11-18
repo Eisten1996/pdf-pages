@@ -4,3 +4,11 @@ pdf-viewer {
 .left {
   float: left;
 }
+
+.rigth {
+  float: right;
+}
+
+p.left {
+  margin: 10px;
+}

@@ -31,11 +31,15 @@ export class PdfComponent implements OnInit {
   }
 
   submit() {
-    this.rows.map((x) => {
-      this.pages.push(parseInt(x.page));
-    });
-    alert(this.pages);
-    location.reload();
+    if (this.rows.length !== 0) {
+      this.rows.map((x) => {
+        this.pages.push(parseInt(x.page));
+      });
+      alert(this.pages);
+      location.reload();
+    } else {
+      alert('Seleccione uno minimo');
+    }
   }
 
   ngOnInit(): void {}

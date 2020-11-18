@@ -19,4 +19,9 @@
   </pdf-viewer>
 </div>
 
-<button (click)="submit()" type="submit">Submit</button>
+<div class="left">
+  <h1>Paginas selccionadas</h1>
+  <p class="left" *ngFor="let item of rows">{{ item.page }}</p>
+</div>
+
+<button class="rigth" (click)="submit()" type="submit">Submit</button>
