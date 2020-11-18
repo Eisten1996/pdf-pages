@@ -25,7 +25,7 @@ export class PdfComponent implements OnInit {
       this.rows.push({ page: event.target.value, checked: true });
     } else {
       const index = this.rows.findIndex((x) => x.page === event.target.value);
-      this.rows.splice(index);
+      this.rows.splice(index,1);
     }
     console.log(this.rows);
   }

@@ -20,8 +20,9 @@
 </div>
 
 <div class="left">
-  <h1>Paginas selccionadas</h1>
+  <h1 *ngIf="rows.length != 0">Paginas seleccionadas</h1>
+  <h1 *ngIf="rows.length == 0">Ninguna pagina seleccionada</h1>
   <p class="left" *ngFor="let item of rows">{{ item.page }}</p>
 </div>
 
-<button class="rigth" (click)="submit()" type="submit">Submit</button>
+<button class="rigth" (click)="submit()" type="submit">Enviar PDF</button>
