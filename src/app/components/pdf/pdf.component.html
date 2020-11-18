@@ -1,0 +1,13 @@
+<div *ngFor="let loop of counter(totalPages); let i = index">
+  <div class="left">
+    <h1>{{ i + 1 }}</h1>
+  </div>
+  <pdf-viewer
+    [src]="pdfSrc"
+    [show-all]="false"
+    [page]="i + 1"
+    [zoom]="0.3"
+    (after-load-complete)="afterLoadComplete($event)"
+  >
+  </pdf-viewer>
+</div>
