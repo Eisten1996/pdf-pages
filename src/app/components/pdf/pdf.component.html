@@ -1,6 +1,13 @@
 <div *ngFor="let loop of counter(totalPages); let i = index">
   <div class="left">
     <h1>{{ i + 1 }}</h1>
+    <input
+      (change)="isSelect($event)"
+      type="checkbox"
+      name="'page'+ (i + 1)"
+      [id]="'page' + (i + 1)"
+      [value]="i + 1"
+    />
   </div>
   <pdf-viewer
     [src]="pdfSrc"
@@ -11,3 +18,5 @@
   >
   </pdf-viewer>
 </div>
+
+<button (click)="submit()" type="submit">Submit</button>
